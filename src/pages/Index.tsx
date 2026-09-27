@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
 import { ParallaxLayer } from '@/components/ParallaxLayer';
 import { FloatingElement } from '@/components/FloatingElement';
-import { ScrollIndicator } from '@/components/ScrollIndicator';
 import { ContentSection } from '@/components/ContentSection';
 import { useParallax } from '@/hooks/use-parallax';
 
 // Import images
 import skylineBg from '@/assets/skyline-bg.jpg';
 import cloudsLayer from '@/assets/clouds-layer.jpg';
-import buildingGlass from '@/assets/building-glass.png';
-import buildingArtdeco from '@/assets/building-artdeco.png';
-import craneClean from '@/assets/crane-clean.png';
-import birds from '@/assets/birds.png';
-import balloon from '@/assets/balloon.png';
+import warplane2 from '@/assets/warplane2.png';
+import warplane1 from '@/assets/warplane1.png';
+import warplane5 from '@/assets/warplane5.png';
+import warplane3 from '@/assets/warplane3.png';
+import warplane4 from '@/assets/warplane4.png';
 import airplane from '@/assets/airplane.png';
 
 const Index: React.FC = () => {
@@ -26,7 +25,7 @@ const Index: React.FC = () => {
   return (
     <div className="relative min-h-[600vh] bg-gradient-sky overflow-hidden">
       {/* Fixed background - Layer 0 (furthest back) */}
-      <div 
+      <div
         className="fixed inset-0 z-0"
         style={{
           backgroundImage: `url(${skylineBg})`,
@@ -41,7 +40,7 @@ const Index: React.FC = () => {
 
       {/* Clouds layer - Layer 1 */}
       <ParallaxLayer speed={0.1} className="z-2">
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: `url(${cloudsLayer})`,
@@ -54,26 +53,26 @@ const Index: React.FC = () => {
 
       {/* Far building - Layer 2 */}
       <ParallaxLayer speed={0.2} className="z-3">
-        <FloatingElement 
+        <FloatingElement
           className="top-[25vh] right-[10vw] w-[28vw] md:w-[18vw] opacity-90"
           animationType="float-slow"
           delay={0}
         >
-          <img 
-            src={buildingArtdeco} 
-            alt="Art deco building" 
+          <img
+            src={warplane1}
+            alt="Art deco building"
             className="w-full h-auto drop-shadow-2xl filter contrast-110"
             style={{ filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))' }}
           />
         </FloatingElement>
       </ParallaxLayer>
 
-      {/* Birds flock - Layer 3 */}
+      {/* warplane3 flock - Layer 3 */}
       <ParallaxLayer speed={0.4} className="z-4">
-        <div 
+        <div
           className="absolute top-[40vh] left-[20vw] w-[40vw] h-[20vh]"
           style={{
-            backgroundImage: `url(${birds})`,
+            backgroundImage: `url(${warplane3})`,
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
@@ -84,14 +83,14 @@ const Index: React.FC = () => {
 
       {/* Near building - Layer 4 */}
       <ParallaxLayer speed={0.6} className="z-5">
-        <FloatingElement 
+        <FloatingElement
           className="top-[100vh] left-[5vw] w-[32vw] md:w-[22vw]"
           animationType="float"
           delay={0.5}
         >
-          <img 
-            src={buildingGlass} 
-            alt="Modern skyscraper" 
+          <img
+            src={warplane2}
+            alt="Modern skyscraper"
             className="w-full h-auto"
             style={{ filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.4))' }}
           />
@@ -100,30 +99,30 @@ const Index: React.FC = () => {
 
       {/* Construction crane - Layer 5 */}
       <ParallaxLayer speed={0.8} className="z-6">
-        <FloatingElement 
+        <FloatingElement
           className="top-[160vh] right-[10vw] w-[28vw] md:w-[18vw]"
           animationType="rotate-slow"
           delay={1}
         >
-          <img 
-            src={craneClean} 
-            alt="Construction crane" 
+          <img
+            src={warplane5}
+            alt="Construction crane"
             className="w-full h-auto"
             style={{ filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.3))' }}
           />
         </FloatingElement>
       </ParallaxLayer>
 
-      {/* Hot air balloon - Layer 3 */}
+      {/* Hot air warplane4 - Layer 3 */}
       <ParallaxLayer speed={0.35} className="z-4">
-        <FloatingElement 
+        <FloatingElement
           className="top-[200vh] left-[60vw] w-[15vw] md:w-[10vw]"
           animationType="float-slow"
           delay={1.5}
         >
-          <img 
-            src={balloon} 
-            alt="Hot air balloon" 
+          <img
+            src={warplane4}
+            alt="Hot air warplane4"
             className="w-full h-auto"
             style={{ filter: 'drop-shadow(0 10px 25px rgba(0,0,0,0.2))' }}
           />
@@ -132,14 +131,14 @@ const Index: React.FC = () => {
 
       {/* Airplane - Layer 5 */}
       <ParallaxLayer speed={0.9} className="z-6">
-        <FloatingElement 
+        <FloatingElement
           className="top-[280vh] left-[20vw] w-[20vw] md:w-[12vw]"
           animationType="float"
           delay={2}
         >
-          <img 
-            src={airplane} 
-            alt="Small airplane" 
+          <img
+            src={airplane}
+            alt="Small airplane"
             className="w-full h-auto"
             style={{ filter: 'drop-shadow(0 8px 20px rgba(0,0,0,0.25))' }}
           />
@@ -148,7 +147,7 @@ const Index: React.FC = () => {
 
       {/* Additional floating elements */}
       <ParallaxLayer speed={0.3} className="z-3">
-        <FloatingElement 
+        <FloatingElement
           className="top-[220vh] left-[30vw] w-48 h-48 md:w-64 md:h-64"
           animationType="pulse"
           delay={0.5}
@@ -158,7 +157,7 @@ const Index: React.FC = () => {
       </ParallaxLayer>
 
       <ParallaxLayer speed={0.5} className="z-4">
-        <FloatingElement 
+        <FloatingElement
           className="top-[320vh] right-[20vw] w-32 h-32 md:w-48 md:h-48"
           animationType="glow"
           delay={1.5}
@@ -167,17 +166,17 @@ const Index: React.FC = () => {
         </FloatingElement>
       </ParallaxLayer>
 
-      {/* More birds in distance */}
+      {/* More warplane3 in distance */}
       <ParallaxLayer speed={0.15} className="z-2">
-        <FloatingElement 
+        <FloatingElement
           className="top-[280vh] right-[40vw] w-[25vw] h-[15vh] opacity-40"
           animationType="float-slow"
           delay={2}
         >
-          <div 
+          <div
             className="w-full h-full"
             style={{
-              backgroundImage: `url(${birds})`,
+              backgroundImage: `url(${warplane3})`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -193,27 +192,26 @@ const Index: React.FC = () => {
         <section className="min-h-screen flex flex-col items-center justify-center px-4">
           <div className="text-center space-y-6 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-bold">
-              <span className="bg-gradient-sunset bg-clip-text text-transparent">
-                Ascending
+              <span className="bg-urban-dark bg-clip-text text-transparent">
+                War
               </span>
               <br />
               <span className="text-urban-dark drop-shadow-lg">
-                Architecture
+                Planes
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-urban max-w-2xl mx-auto">
-              Experience the urban skyline through immersive parallax layers
+              Explore the evolution of military aviation through an immersive parallax journey.
             </p>
           </div>
-          <ScrollIndicator />
         </section>
 
         {/* Foundation Section */}
         <section className="min-h-screen flex items-center justify-center px-4">
           <ContentSection
             subtitle="Chapter 1"
-            title="Urban Foundation"
-            description="From the ground up, every building tells a story of ambition and innovation. The city's foundation is built on dreams that reach toward the sky."
+            title="Origins of Flight"
+            description="The history of military aviation began with a simple idea: take the battlefield into the sky. Early aircraft transformed reconnaissance and changed the way wars were fought."
             align="center"
           />
         </section>
@@ -222,8 +220,8 @@ const Index: React.FC = () => {
         <section className="min-h-screen flex items-center justify-start px-4">
           <ContentSection
             subtitle="Chapter 2"
-            title="Rising Heights"
-            description="Steel and glass pierce the clouds as modern architecture defies gravity. Each floor represents progress, each window a different perspective on the world below."
+            title="Into the Skies"
+            description="As aviation technology evolved, aircraft became faster, more capable, and increasingly important to military strategy. Every generation pushed the limits of speed, altitude, and maneuverability."
             align="left"
             className="ml-8 md:ml-20"
           />
@@ -233,8 +231,8 @@ const Index: React.FC = () => {
         <section className="min-h-screen flex items-center justify-end px-4">
           <ContentSection
             subtitle="Chapter 3"
-            title="Building Tomorrow"
-            description="Cranes dance against the skyline, orchestrating the city's evolution. Every beam placed is a step toward the future, transforming blueprints into reality."
+            title="Engineering Power"
+            description="Behind every warplane is a combination of engineering, aerodynamics, and technology. Powerful engines and carefully designed airframes allow these machines to operate in demanding environments."
             align="right"
             className="mr-8 md:mr-20"
           />
@@ -244,8 +242,8 @@ const Index: React.FC = () => {
         <section className="min-h-screen flex items-center justify-center px-4">
           <ContentSection
             subtitle="Chapter 4"
-            title="The Living Skyline"
-            description="The cityscape breathes with life - windows glowing like pixels in an urban canvas. From dawn to dusk, the architecture transforms with light and shadow."
+            title="Machines of War"
+            description="From fighters and interceptors to reconnaissance and ground-attack aircraft, military aviation has produced a wide variety of specialized machines, each designed for a different role in the sky."
             align="center"
           />
         </section>
@@ -254,15 +252,15 @@ const Index: React.FC = () => {
         <section className="min-h-screen flex flex-col items-center justify-center px-4 space-y-8">
           <ContentSection
             subtitle="The Journey Continues"
-            title="Your Urban Story"
-            description="Every building has a purpose, every skyline tells a tale. As you scroll through these architectural layers, you become part of the city's ever-evolving narrative."
+            title="Evolution of Air Power"
+            description="From the earliest military aircraft to modern fighter jets, aviation continues to evolve. Technology changes, designs change, and the aircraft of tomorrow will push the boundaries even further."
             align="center"
           />
-          <button 
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="px-8 py-4 bg-primary/10 border border-primary text-primary rounded-full hover:bg-primary/20 transition-all duration-300 hover:shadow-glow animate-pulse"
           >
-            Return to Ground Level
+            Return to the Skies
           </button>
         </section>
       </div>
